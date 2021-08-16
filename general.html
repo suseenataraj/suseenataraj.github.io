@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<h1 style="text-align:center;">General</h1>
+<h5 style="text-align:center;">My general opinion on things happening around me</h5>
+{% for post in site.categories.General %}
+<div class="container"> 
+    <div class="jumbotron" style="background-color:white">  
+        <h3>{{post.title}}</h3>
+        <h6>By&nbsp;&nbsp;{{post.author}}&nbsp;&nbsp;on&nbsp;&nbsp;{{ post.date | date_to_string }}</h6>
+        <p>{{post.content}}</p>
+      </div> 
+    </div>
+    {%endfor%}

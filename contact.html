@@ -1,0 +1,73 @@
+---
+layout: page
+---
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+</head>
+<body>
+    <h2>Feel free to drop an E-mail</h2>
+    <h4>Just say HII...</h4>
+    <form action="https://formspree.io/myynpdad" method="POST">
+        <b>Name</b><input type="text" name="sendername"  required>
+        <b>Email</b><input type="email" name="email" autocomplete="off" required>
+        <b>Subject</b><input type="text" name="subject" required>
+           <label><b>Message</b></label><br>
+           <textarea id="myText" rows="4" cols="40" name="message"></textarea><br><br>
+           <input type="Submit" value="Send message">
+</form>
+</body>
+<style>
+    body{
+        text-align: center;
+    }
+
+    form{
+        margin: 20px auto;
+        width: 320px;
+        color: black;
+    
+      }
+    
+      input{
+        padding: 10px;
+        font-size: inherit;
+      }
+      input[type="text"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid black;
+      }
+    
+      input[type="textarea"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid black;
+      }
+    
+      input[type="email"]{
+        display: block;
+        margin-bottom: 25px;
+        width: 100%;
+        border: 2px solid black;
+      }
+    
+      input[type="submit"]{
+        width: 300px;
+        height: 45px;
+        border: none;
+        background: black;
+        color: white;
+      }
+</style>
