@@ -36,74 +36,40 @@ title: "Pauses of my life!!"
   
   <br>
   <br>
-  
-
-  {% for post in paginator.posts%}
-  <div class="container">
-    <h4><a href="{{post.url}}"style="color:black; font-size:50px;">{{post.title}}</a></h4>
-    <p><a href="{{post.url}}"><i class="far fa-user"></i>&nbsp;&nbsp;{{post.author}}&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{post.date| date_to_long_string }}</a></p>
-    <p>{{post.excerpt|slice: 0,700}}</p>
-    <a href="{{post.url}}" class="btn btn-primary">CONTINUE READING</a>
-  </div>
-  <br>
-  <br>
-  <hr>
-  {%endfor%}
-
-
-<div class="page">
-<!-- pagination -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="webjeda">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="/">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
-</div>
-<style>
-  .pagination a, .pagination span {
-    padding: 7px 18px;
-    border: 1px solid #eee;
-    margin-left: -2px;
-    margin-right: -2px;
-    background-color: #ffffff;
-    display: inline-block;
-  }
-
-  .pagination a {    
-      &:hover {
-        background-color: #f1f1f1;
-        color: #333;
+  <style>
+    .wrapper {
+      height: 50vh;
+      /*This part is important for centering*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
- }
-
-.pagination {
-    text-align: center;
- }
-.container{
-  text-align: center;
-}
-.page{
-  text-align: center;
-}
-</style>
+    
+    .typing-demo {
+      width: 22ch;
+      animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: 'Trebuchet MS';
+      font-size: 5em;
+    }
+    
+    @keyframes typing {
+      from {
+        width: 0
+      }
+    }
+        
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }
+  </style>
+  <div class="wrapper">
+    <div class="typing-demo">
+      Love you da papa...
+    </div>
+</div>
 {% include category.html %}
