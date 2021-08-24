@@ -2,6 +2,5 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Suseandhiran" # the name of your site, e.g. ACME Corp.
 formspree_email: suseenataraj@yahoo.com
 permalink: /:categories/:title/
-plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: "/postindex/page:num/"
